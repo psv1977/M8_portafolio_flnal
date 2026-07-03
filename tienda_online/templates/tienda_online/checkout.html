@@ -1,0 +1,28 @@
+{% extends 'tienda_online/base.html' %}
+
+{% block content %}
+
+<div class="card shadow-sm">
+    <div class="card-body text-center py-5">
+        <h1 class="text-success fw-bold">Compra confirmada</h1>
+
+        <p class="lead mt-3">
+            Tu compra fue registrada correctamente.
+        </p>
+
+        <p>
+            Número de orden:
+            <strong>#{{ orden.id }}</strong>
+        </p>
+
+        <h3 class="mt-4">
+            Total: ${{ orden.total }}
+        </h3>
+
+        <a href="{% url 'home' %}" class="btn btn-primary mt-4">
+            Volver al catálogo
+        </a>
+    </div>
+</div>
+
+{% endblock %}
